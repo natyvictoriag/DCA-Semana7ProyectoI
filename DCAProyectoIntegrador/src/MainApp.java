@@ -5,19 +5,23 @@ public class MainApp extends PApplet {
 		PApplet.main("MainApp");
 	}
 
+	Logica app;
+
 	public void settings() {
-     size(1000,800);
+		size(1000, 800);
 	}
 
 	public void setup() {
-     
+
 	}
 
 	public void draw() {
-     background(255);
+		app.pintar();
+		background(255);
 	}
 
 	public void mousePressed() {
+		app.click();
 
 	}
 }

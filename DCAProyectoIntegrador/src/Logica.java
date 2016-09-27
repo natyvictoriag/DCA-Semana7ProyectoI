@@ -1,11 +1,16 @@
-import java.awt.Image;
-import java.util.ArrayList;
 import processing.core.PApplet;
 import processing.core.PImage;
-import java.util.List;
 import java.io.File;
+import java.io.FilenameFilter;
+import java.awt.Image;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Logica {
+	
+	PApplet app;
+	
 	private Logica log;
 	private int posX, posY;
 	private ArrayList<Image> imagenes;
@@ -14,29 +19,36 @@ public class Logica {
 	private String[] list;
 	private String folder;
 	// private PImage nort;
-	private PApplet app;
 	// arreglo de imagenes
-
-	public Logica(PApplet app) {
-		imagenes = new ArrayList<Image>();
-		file = new File("data/images");
-		list = file.list();
-		folder= file.getPath();
-		images = new PImage[list.length];
+	
+	//======================================================================================================================
+	
+	public Logica (PApplet app) {
 		
-		for (int i = 0; i < list.length; i++) {
-			System.out.println(list[i]);
-			
-			images[i]= this.app.loadImage(folder + list[i]);
-			
-		}
+		
+		
+//		imagenes = new ArrayList<Image>();
+//		file = new File("data/images");
+//		list = file.list();
+//		folder= file.getPath();
+//		images = new PImage[list.length];
+//		
+//		for (int i = 0; i < list.length; i++) {
+//			System.out.println(list[i]);
+//			
+//			images[i]= this.app.loadImage(folder + list[i]);
+//		}
 
 	}
-
+	
+	//======================================================================================================================
+	
 	public void pintar() {
 
 	}
-
+	
+	//======================================================================================================================
+	
 	public void click() {
 
 	}

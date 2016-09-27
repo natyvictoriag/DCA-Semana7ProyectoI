@@ -12,11 +12,10 @@ public class Logica {
 	PApplet app;
 	
 	private Logica log;
-	private int posX, posY;
-	private ArrayList<Image> imagenes;
-	private File file;
-	private PImage[] images;
-	private String[] list;
+	private int play = 0, posX = 0, posY = 0, numIma = 4, rsize = 0,rota = 0, y = 87, var = 0;
+	private boolean aumento = true, gira = false, completa =false;
+	private PImage[] fondo;
+	private String[] clases = {".png", ".jpg", ".bmp"};
 	private String folder;
 	// private PImage nort;
 	// arreglo de imagenes

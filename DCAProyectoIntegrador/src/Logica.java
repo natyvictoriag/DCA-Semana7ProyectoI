@@ -69,6 +69,26 @@ public class Logica {
 	// ======================================================================================================================
 
 	public void click() {
+		
+		System.out.println("Pos X " + app.mouseX + " pos Y " + app.mouseY);
+
+		// Adelante en el visualizador
+		if (app.mouseX < 966 && app.mouseX > 860 && app.mouseY < 682 && app.mouseY > 621) {
+			play += 1;
+		} else
+		// Atras en el visualizador
+		if (app.mouseX < 700 && app.mouseX > 633 && app.mouseY < 680 && app.mouseY > 619) {
+			// correr = 19;
+			play -= 1;
+		}
+
+		if (play > 19) {
+			play = 0;
+
+		}
+		if (play < 0) {
+			play = 19;
+		}
 
 	}
 

@@ -2,6 +2,7 @@ import processing.core.PApplet;
 import processing.core.PImage;
 import java.io.File;
 import java.io.FilenameFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.Image;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,11 +12,8 @@ public class Logica {
 	private PApplet app;
 
 	int play = 0, rsize = 0;
-	private boolean aumento = true, gira = false, completa = false;
 	private PImage fondo;
-	private String[] clases = { ".png", ".jpg", ".bmp" };
 	private PImage[] ima = new PImage[20];
-	private PImage[] imaPrinsipal = new PImage[20];
 
 	// ======================================================================================================================
 
@@ -27,13 +25,13 @@ public class Logica {
 		File carpeta = new File("../data/images");
 
 		// arreglo con los tipos de archivos
-		String[] clases = new String[] { "jpg", "png", "bmp" };
+		String[] tipos = new String[] { "jpg", "png", "bmp" };
 
 		// identifica las extensiones de las imagenes
 		FilenameFilter filtroIma = new FilenameFilter() {
 
 			public boolean accept(File carpeta, String nombre) {
-				for (final String ext : clases) {
+				for (final String ext : tipos) {
 					if (nombre.endsWith("." + ext)) {
 						return true;
 					}
@@ -42,13 +40,12 @@ public class Logica {
 			}
 		};
 
-		// arreglo de tipo File que guarda donde estan las imagenes (su
-		// direccion)
-		File[] files = carpeta.listFiles(filtroIma);
+		// arreglo de tipo File que guarda donde estan las imagenes (su direccion)
+		File[] archivo = carpeta.listFiles(filtroIma);
 
 		// Me carga las imagenes
-		for (int i = 0; i < files.length; i++) {
-			ima[i] = app.loadImage(files[i].toString());
+		for (int i = 0; i < archivo.length; i++) {
+			ima[i] = app.loadImage(archivo[i].toString());
 		}
 
 		fondo = app.loadImage("../data/pantallas/interfaz.png");

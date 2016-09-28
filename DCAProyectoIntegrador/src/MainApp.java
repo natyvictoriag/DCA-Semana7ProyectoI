@@ -9,7 +9,7 @@ public class MainApp extends PApplet {
 	}
 
 	public void settings() {
-		size(1000, 800);
+		size(1000, 600);
 	}
 
 	public void setup() {
@@ -17,8 +17,9 @@ public class MainApp extends PApplet {
 	}
 
 	public void draw() {
-		app.pintar();
 		background(255);
+		app.pintar();
+		
 	}
 
 	public void mousePressed() {

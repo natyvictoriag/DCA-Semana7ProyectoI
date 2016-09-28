@@ -8,10 +8,9 @@ import java.util.List;
 
 public class Logica {
 
-	PApplet app;
+	private PApplet app;
 
-	private Logica log;
-	private int play = 0, posX = 0, posY = 0, numIma = 4, rsize = 0, rota = 0, y = 87, var = 0;
+	int play = 0, rsize = 0;
 	private boolean aumento = true, gira = false, completa = false;
 	private PImage fondo;
 	private String[] clases = { ".png", ".jpg", ".bmp" };
@@ -31,7 +30,6 @@ public class Logica {
 		String[] clases = new String[] { "jpg", "png", "bmp" };
 
 		// identifica las extensiones de las imagenes
-
 		FilenameFilter filtroIma = new FilenameFilter() {
 
 			public boolean accept(File carpeta, String nombre) {
@@ -50,9 +48,9 @@ public class Logica {
 
 		// Me carga las imagenes
 		for (int i = 0; i < files.length; i++) {
-			imaPrinsipal[i] = app.loadImage(files[i].toString());
-
+			ima[i] = app.loadImage(files[i].toString());
 		}
+
 		fondo = app.loadImage("../data/pantallas/interfaz.png");
 	}
 
@@ -62,14 +60,13 @@ public class Logica {
 		app.image(fondo, 0, 0);
 
 		// carga la imagen del visualizador
-
-		imaPrinsipal[play].resize(547 + rsize, 363 + rsize);
+		ima[play].resize(547 + rsize, 363 + rsize);
 	}
 
 	// ======================================================================================================================
 
 	public void click() {
-		
+
 		System.out.println("Pos X " + app.mouseX + " pos Y " + app.mouseY);
 
 		// Adelante en el visualizador

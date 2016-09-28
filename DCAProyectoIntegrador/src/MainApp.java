@@ -4,9 +4,9 @@ public class MainApp extends PApplet {
 	
 	Logica app;
 
-//	public static void main(String[] args) {
-//		PApplet.main("MainApp");
-//	}
+	public static void main(String[] args) {
+		PApplet.main("MainApp");
+	}
 
 	public void settings() {
 		size(1000, 800);

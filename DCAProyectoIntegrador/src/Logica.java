@@ -16,7 +16,8 @@ public class Logica {
 	private boolean aumento = true, gira = false, completa =false;
 	private PImage[] fondo;
 	private String[] clases = {".png", ".jpg", ".bmp"};
-	private String folder;
+	private PImage[] ima = new PImage[20];
+	private PImage[] imaPrinsipal = new PImage[20];
 	// private PImage nort;
 	// arreglo de imagenes
 	

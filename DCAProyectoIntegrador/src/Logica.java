@@ -44,9 +44,9 @@ public class Logica {
 		File[] archivo = carpeta.listFiles(filtroIma);
 
 		// Me carga las imagenes
-		for (int i = 0; i < archivo.length; i++) {
-			ima[i] = app.loadImage(archivo[i].toString());
-		}
+//		for (int i = 0; i < archivo.length; i++) {
+//			ima[i] = app.loadImage(archivo[i].toString());
+//		}
 
 		fondo = app.loadImage("../data/pantallas/interfaz.png");
 	}
@@ -57,7 +57,7 @@ public class Logica {
 		app.image(fondo, 0, 0);
 
 		// carga la imagen del visualizador
-		ima[play].resize(547 + rsize, 363 + rsize);
+		//ima[play].resize(547 + rsize, 363 + rsize);
 	}
 
 	// ======================================================================================================================
